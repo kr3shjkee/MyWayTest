@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62746f8354cab3c4c83b3f67bb0a996e, type: 3}
+  m_Name: UrlSettings
+  m_EditorClassIdentifier: 
+  <JsonStringUrl>k__BackingField: https://drive.usercontent.google.com/u/0/uc?id=1q1J3iFZIiIH9HwiVnXgNCmycZFd7GVwi&export=download
+  <JsonIntUrl>k__BackingField: https://drive.usercontent.google.com/u/0/uc?id=1AAxbU7QH98CDE8FMBxOS_RUGe6Mr5-iZ&export=download
