@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5859899788557495492}
   - component: {fileID: 2347663630616642829}
   - component: {fileID: 3616754442473796552}
+  - component: {fileID: 3517718727624121365}
   m_Layer: 5
   m_Name: Loading Canvas
   m_TagString: Untagged
@@ -115,6 +116,19 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!114 &3517718727624121365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302549920029980372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e757ed74a41a9a04598c1b6819ca747c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canvasGroup: {fileID: 3616754442473796552}
 --- !u!1 &2765815793301630808
 GameObject:
   m_ObjectHideFlags: 0

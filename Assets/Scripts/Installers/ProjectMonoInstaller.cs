@@ -1,9 +1,13 @@
-using UnityEngine;
+using Managers;
 using Zenject;
 
-public class ProjectMonoInstaller : MonoInstaller
+namespace Installers
 {
-    public override void InstallBindings()
+    public class ProjectMonoInstaller : MonoInstaller
     {
+        public override void InstallBindings()
+        {
+            Container.BindInterfacesAndSelfTo<GameManager>().AsSingle();
+        }
     }
 }

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,7 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77d1a38b-2d80-4c46-979d-ea94ed5dc520" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyWayTest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyWayTest/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyWayTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyWayTest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Error Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Error Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Loading Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Loading Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Main Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Main Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/ProjectMonoInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/ProjectMonoInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +44,14 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/ProjectSettingsInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/LoadingWindowBasePresenter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MVP/Views/LoadingWindowView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MVP/Views/ErrorWindowView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/MainSceneMonoInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/UrlSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/Dto/IDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MVP/Views/MainWindowView.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -49,6 +67,22 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/ProjectSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/UrlSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/ProjectSettingsInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MVP/IPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/ErrorWindowPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/MainWindowPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/ProjectMonoInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/LoadingWindowPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MVP/BasePresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/LoadingWindowBasePresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MVP/BaseView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Views/LoadingWindowView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Views/ErrorWindowView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Views/MainWindowView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/MainSceneMonoInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/ErrorWindowBasePresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/MainWindowBasePresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/LoadingService.cs" />
       </list>
     </option>
   </component>
@@ -91,7 +125,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737400568652</updated>
-      <workItem from="1737400580512" duration="6740000" />
+      <workItem from="1737400580512" duration="10151000" />
     </task>
     <servers />
   </component>
@@ -113,5 +147,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="794" y="221" key="RiderGenerateDialog" timestamp="1737414428417">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="221" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1737414428417" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1737413892140">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1737413892140" />
   </component>
 </project>
