@@ -16,6 +16,7 @@ namespace Services
         private bool _isLoadingFinish;
         private MainScreenDto _dto;
         private CancellationTokenSource _cts;
+        private int _bundleVersion = 0;
         public LoadingService(UrlSettings urlSettings)
         {
             _urlSettings = urlSettings;
@@ -34,7 +35,7 @@ namespace Services
             ShowLoadScreen?.Invoke();
             CheckSaveData();
             
-            if (await TryLoadJsons())
+            if (await TryLoadJsons() && await TryLoadBundle())
             {
                 _isLoadingFinish = true;
                 LoadingFinished?.Invoke(WaitingType.Loading);
@@ -117,6 +118,53 @@ namespace Services
             value = JsonUtility.FromJson<TValue>(json);
 
             return value;
+        }
+
+        private async UniTask<bool> TryLoadBundle()
+        {
+            try
+            {
+                _cts = new CancellationTokenSource();
+                Sprite sprite = await GetSprite(_urlSettings.AssetBundleUrl, _cts.Token);
+                _cts.Dispose();
+                _cts = null;
+                _dto.ButtonSprite = sprite;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private async UniTask<Sprite> GetSprite(string url, CancellationToken token)
+        {
+            _bundleVersion++;
+
+            var www = WWW.LoadFromCacheOrDownload(url, _bundleVersion);
+            await www;
+
+            if (!string.IsNullOrEmpty(www.error))
+            {
+                throw new Exception("Some errors with download bundle");
+            }
+            
+            Debug.Log($"Successfully download Bundle. Version: {_bundleVersion}");
+
+            AssetBundle bundle = www.assetBundle;
+
+            var spriteRequest = await bundle.LoadAssetAsync("TextBTN_Big.png", typeof(Sprite));
+            
+            if (spriteRequest is null)
+            {
+                throw new Exception("Unpacking error");
+            }
+            
+            Debug.Log($"Successfully unpacking Bundle");
+
+            Sprite sprite = spriteRequest as Sprite;
+            return sprite;
         }
     }
 }

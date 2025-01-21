@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 3313050620
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: content/buttonsprite
+      Dependencies: {}

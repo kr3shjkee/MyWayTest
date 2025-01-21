@@ -4,6 +4,7 @@
     <e p="C:\Users\nikit\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\nikit\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_MyWayTest.-1755698321.00" t="ExcludeRecursive" />
     <e p="D:\GitHub\MYWayTest" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -959,6 +960,9 @@
             </e>
             <e p="UrlSettings.cs" t="Include" />
             <e p="ValuesSettings.cs" t="Include" />
+          </e>
+          <e p="Editor" t="Include">
+            <e p="CreateAssetBundles.cs" t="Include" />
           </e>
           <e p="Installers" t="Include">
             <e p="MainSceneMonoInstaller.cs" t="Include" />
