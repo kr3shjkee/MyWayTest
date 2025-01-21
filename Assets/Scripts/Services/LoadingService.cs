@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using Data;
 using Data.Dto;
@@ -14,12 +15,14 @@ namespace Services
 
         private bool _isLoadingFinish;
         private MainScreenDto _dto;
+        private CancellationTokenSource _cts;
         public LoadingService(UrlSettings urlSettings)
         {
             _urlSettings = urlSettings;
         }
         public event Action ShowLoadScreen;
         public event Action HideLoadScreen;
+        public event Action LoadWithError;
         public event Action<WaitingType> LoadingFinished;
 
         public bool IsLoadingFinish => _isLoadingFinish;
@@ -30,9 +33,16 @@ namespace Services
             _dto = new MainScreenDto();
             ShowLoadScreen?.Invoke();
             CheckSaveData();
-            await LoadJsons();
-            _isLoadingFinish = true;
-            LoadingFinished?.Invoke(WaitingType.Loading);
+            
+            if (await TryLoadJsons())
+            {
+                _isLoadingFinish = true;
+                LoadingFinished?.Invoke(WaitingType.Loading);
+            }
+            else
+            {
+                LoadWithError?.Invoke();
+            }
         }
         
         public MainScreenDto GetDto()
@@ -50,39 +60,61 @@ namespace Services
             
         }
 
-        private async UniTask LoadJsons()
+        private async UniTask<bool> TryLoadJsons()
         {
-            JsonStringDto stringDto = await GetJson<JsonStringDto>(_urlSettings.JsonStringUrl);
-            _dto.Text = stringDto.Text;
+            try
+            {
+                _cts = new CancellationTokenSource();
+                JsonStringDto stringDto = await GetJson<JsonStringDto>(_urlSettings.JsonStringUrl, _cts.Token);
+                _cts.Dispose();
+                _cts = null;
+                _dto.Text = stringDto.Text;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+            
+            try
+            {
+                _cts = new CancellationTokenSource();
+                JsonIntDto intDto = await GetJson<JsonIntDto>(_urlSettings.JsonIntUrl, _cts.Token);
+                _cts.Dispose();
+                _cts = null;
+                _dto.Counter = intDto.StartValue;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
 
-            JsonIntDto intDto = await GetJson<JsonIntDto>(_urlSettings.JsonIntUrl);
-            _dto.Counter = intDto.StartValue;
+            return true;
         }
         
-        private async UniTask<TValue> GetJson<TValue>(string url) where TValue : IDto
+        private async UniTask<TValue> GetJson<TValue>(string url, CancellationToken token) where TValue : IDto
         {
-            TValue value = default;
+            TValue value;
 
             UnityWebRequest request = UnityWebRequest.Get(url);
-            await request.SendWebRequest();
+            await request
+                .SendWebRequest()
+                .WithCancellation(token);
         
             if (request.isHttpError || request.isNetworkError)
             {
-                
+                throw new Exception("Http or network problem");
             }
-            else
+            
+            Debug.Log($"Successfully download Json ({typeof(TValue)})");
+
+            string json = request.downloadHandler.text;
+
+            if (string.IsNullOrEmpty(json))
             {
-                Debug.Log("Successfully download Json");
-
-                string json = request.downloadHandler.text;
-
-                if (string.IsNullOrEmpty(json))
-                {
-                    
-                }
-
-                value = JsonUtility.FromJson<TValue>(json);
+                throw new Exception("Json is Null or Empty");  
             }
+
+            value = JsonUtility.FromJson<TValue>(json);
 
             return value;
         }

@@ -11,22 +11,27 @@ namespace Managers
         private readonly LoadingService _loadingService;
         private readonly TimerService _timerService;
         private readonly MainScreenService _mainScreenService;
+        private readonly ErrorScreenService _errorScreenService;
 
         public GameManager(LoadingService loadingService, 
             TimerService timerService, 
-            MainScreenService mainScreenService)
+            MainScreenService mainScreenService,
+            ErrorScreenService errorScreenService)
         {
             _loadingService = loadingService;
             _timerService = timerService;
             _mainScreenService = mainScreenService;
+            _errorScreenService = errorScreenService;
             
             _loadingService.LoadingFinished += CheckTimer;
+            _loadingService.LoadWithError += HandleLoadError;
             _timerService.TimerFinished += CheckTimer;
         }
         
         public void Dispose()
         {
             _loadingService.LoadingFinished -= CheckTimer;
+            _loadingService.LoadWithError -= HandleLoadError;
             _timerService.TimerFinished -= CheckTimer;
         }
         
@@ -45,6 +50,11 @@ namespace Managers
                 _mainScreenService.InvokeShowMainScreen(dto);
                 _loadingService.InvokeHideLoadScreen();
             }
+        }
+
+        private void HandleLoadError()
+        {
+            _errorScreenService.InvokeShowMainScreen();
         }
     }
 }

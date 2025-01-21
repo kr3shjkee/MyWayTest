@@ -969,7 +969,7 @@
             <e p="BasePresenter.cs" t="Include" />
             <e p="BaseView.cs" t="Include" />
             <e p="Presenters" t="Include">
-              <e p="ErrorWindowBasePresenter.cs" t="Include" />
+              <e p="ErrorWindowPresenter.cs" t="Include" />
               <e p="LoadingWindowPresenter.cs" t="Include" />
               <e p="MainWindowPresenter.cs" t="Include" />
             </e>
@@ -980,6 +980,7 @@
             </e>
           </e>
           <e p="Services" t="Include">
+            <e p="ErrorScreenService.cs" t="Include" />
             <e p="LoadingService.cs" t="Include" />
             <e p="MainScreenService.cs" t="Include" />
             <e p="TimerService.cs" t="Include" />

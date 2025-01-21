@@ -25,13 +25,14 @@ namespace Installers
             Container.Bind<LoadingService>().AsSingle();
             Container.Bind<TimerService>().AsSingle();
             Container.Bind<MainScreenService>().AsSingle();
+            Container.Bind<ErrorScreenService>().AsSingle();
         }
         
         private void BindPresenters()
         {
             Container.BindInterfacesAndSelfTo<LoadingWindowPresenter>().AsSingle();
             Container.BindInterfacesAndSelfTo<MainWindowPresenter>().AsSingle();
-            Container.BindInterfacesAndSelfTo<ErrorWindowBasePresenter>().AsSingle();
+            Container.BindInterfacesAndSelfTo<ErrorWindowPresenter>().AsSingle();
         }
 
         private void BindViews()
