@@ -140,10 +140,16 @@ namespace Services
 
         private async UniTask<Sprite> GetSprite(string url, CancellationToken token)
         {
+            if (!Caching.ready)
+            {
+                throw new Exception("Caching is not ready");
+            }
+
+            Caching.ClearCache();
             _bundleVersion++;
 
             var www = WWW.LoadFromCacheOrDownload(url, _bundleVersion);
-            await www;
+            await www.WithCancellation(token);
 
             if (!string.IsNullOrEmpty(www.error))
             {
@@ -153,8 +159,10 @@ namespace Services
             Debug.Log($"Successfully download Bundle. Version: {_bundleVersion}");
 
             AssetBundle bundle = www.assetBundle;
+            www.Dispose();
 
             var spriteRequest = await bundle.LoadAssetAsync("TextBTN_Big.png", typeof(Sprite));
+            bundle.Unload(false);
             
             if (spriteRequest is null)
             {

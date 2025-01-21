@@ -27,6 +27,7 @@ namespace Managers
             _loadingService.LoadWithError += HandleLoadError;
             _timerService.TimerFinished += CheckTimer;
             _errorScreenService.RetryLoad += Initialize;
+            _mainScreenService.UpdateContent += Initialize;
         }
         
         public void Dispose()
@@ -35,6 +36,7 @@ namespace Managers
             _loadingService.LoadWithError -= HandleLoadError;
             _timerService.TimerFinished -= CheckTimer;
             _errorScreenService.RetryLoad -= Initialize;
+            _mainScreenService.UpdateContent -= Initialize;
         }
         
         public void Initialize()

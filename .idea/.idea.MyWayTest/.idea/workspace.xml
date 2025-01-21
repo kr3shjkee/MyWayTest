@@ -23,10 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77d1a38b-2d80-4c46-979d-ea94ed5dc520" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Error Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Error Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/ErrorWindowPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/ErrorWindowPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MVP/Views/ErrorWindowView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MVP/Views/ErrorWindowView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/ErrorScreenService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/ErrorScreenService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyWayTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyWayTest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/MainWindowPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/MainWindowPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/LoadingService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/LoadingService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/MainScreenService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/MainScreenService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +39,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/65A5CBB1-F267-4FE5-8975-E26D67F51FB7/81/ddf8a2c2/EventDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.unitask@8042b29ff8/Runtime/UniTask.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/ProjectSettingsInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/LoadingWindowPresenter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MVP/Views/LoadingWindowView.cs" root0="FORCE_HIGHLIGHTING" />
@@ -75,14 +77,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/ProjectSettingsInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/Enum/WaitingType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/TimerService.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Services/MainScreenService.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/Dto/MainScreenDto.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Views/MainWindowView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/MainWindowPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/Dto/JsonStringDto.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/Dto/JsonIntDto.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/MainSceneMonoInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/ErrorWindowBasePresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LoadingAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Views/LoadingWindowView.cs" />
@@ -90,10 +89,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Animations/LoadingAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/CreateAssetBundles.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/UrlSettings.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Services/LoadingService.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Views/ErrorWindowView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/ErrorScreenService.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/ErrorWindowPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/MainScreenService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/MainWindowPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/LoadingService.cs" />
       </list>
     </option>
   </component>
@@ -139,7 +141,7 @@
       <option name="presentableId" value="Default" />
       <updated>1737400568652</updated>
       <workItem from="1737400580512" duration="16558000" />
-      <workItem from="1737456404529" duration="5214000" />
+      <workItem from="1737456404529" duration="8099000" />
     </task>
     <servers />
   </component>
@@ -236,9 +238,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="221" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1737414428417" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1737461565761">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1737462882563">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1737461565761" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1737462882563" />
   </component>
 </project>
