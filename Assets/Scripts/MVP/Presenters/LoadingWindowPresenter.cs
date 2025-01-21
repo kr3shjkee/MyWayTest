@@ -13,12 +13,14 @@ namespace MVP.Presenters
             _view = view;
             _service = service;
             _service.ShowLoadScreen += _view.Show;
+            _service.HideLoadScreen += _view.Hide;
         }
 
 
         protected override void OnDispose()
         {
             _service.ShowLoadScreen -= _view.Show;
+            _service.HideLoadScreen -= _view.Hide;
         }
     }
 }

@@ -8,10 +8,12 @@ namespace Installers
     public class ProjectSettingsInstaller : ScriptableObjectInstaller<ProjectSettingsInstaller>
     {
         [field: SerializeField] private UrlSettings _urlSettings;
+        [field: SerializeField] private ValuesSettings _valuesSettings;
         
         public override void InstallBindings()
         {
             Container.BindInstance(_urlSettings);
+            Container.BindInstance(_valuesSettings);
         }
     }
 }

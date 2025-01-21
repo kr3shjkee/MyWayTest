@@ -2,6 +2,6 @@ namespace Data.Dto
 {
     public class JsonStringDto : IDto
     {
-        public string StringValue;
+        public string Text;
     }
 }

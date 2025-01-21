@@ -949,8 +949,13 @@
               <e p="IDto.cs" t="Include" />
               <e p="JsonIntDto.cs" t="Include" />
               <e p="JsonStringDto.cs" t="Include" />
+              <e p="MainScreenDto.cs" t="Include" />
+            </e>
+            <e p="Enum" t="Include">
+              <e p="WaitingType.cs" t="Include" />
             </e>
             <e p="UrlSettings.cs" t="Include" />
+            <e p="ValuesSettings.cs" t="Include" />
           </e>
           <e p="Installers" t="Include">
             <e p="MainSceneMonoInstaller.cs" t="Include" />
@@ -966,7 +971,7 @@
             <e p="Presenters" t="Include">
               <e p="ErrorWindowBasePresenter.cs" t="Include" />
               <e p="LoadingWindowPresenter.cs" t="Include" />
-              <e p="MainWindowBasePresenter.cs" t="Include" />
+              <e p="MainWindowPresenter.cs" t="Include" />
             </e>
             <e p="Views" t="Include">
               <e p="ErrorWindowView.cs" t="Include" />
@@ -976,6 +981,8 @@
           </e>
           <e p="Services" t="Include">
             <e p="LoadingService.cs" t="Include" />
+            <e p="MainScreenService.cs" t="Include" />
+            <e p="TimerService.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">

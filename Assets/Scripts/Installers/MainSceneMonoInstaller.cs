@@ -1,3 +1,4 @@
+using Managers;
 using MVP.Presenters;
 using MVP.Views;
 using Services;
@@ -16,17 +17,20 @@ namespace Installers
             BindViews();
             BindServices();
             BindPresenters();
+            BindManagers();
         }
         
         private void BindServices()
         {
-            Container.BindInterfacesAndSelfTo<LoadingService>().AsSingle();
+            Container.Bind<LoadingService>().AsSingle();
+            Container.Bind<TimerService>().AsSingle();
+            Container.Bind<MainScreenService>().AsSingle();
         }
         
         private void BindPresenters()
         {
             Container.BindInterfacesAndSelfTo<LoadingWindowPresenter>().AsSingle();
-            Container.BindInterfacesAndSelfTo<MainWindowBasePresenter>().AsSingle();
+            Container.BindInterfacesAndSelfTo<MainWindowPresenter>().AsSingle();
             Container.BindInterfacesAndSelfTo<ErrorWindowBasePresenter>().AsSingle();
         }
 
@@ -35,6 +39,11 @@ namespace Installers
             Container.BindInstance(_loadingWindowView);
             Container.BindInstance(_mainWindowView);
             Container.BindInstance(_errorWindowView);
+        }
+
+        private void BindManagers()
+        {
+            Container.BindInterfacesAndSelfTo<GameManager>().AsSingle();
         }
     }
 }

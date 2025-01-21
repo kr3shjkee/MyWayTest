@@ -129,6 +129,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 1015820666901937758}
+  <Text>k__BackingField: {fileID: 1209831557996942363}
+  <Counter>k__BackingField: {fileID: 6833101640072563286}
+  <UpButton>k__BackingField: {fileID: 7917724409279380727}
+  <UpdateButton>k__BackingField: {fileID: 4615021287220385692}
 --- !u!1 &2151135409107437438
 GameObject:
   m_ObjectHideFlags: 0
