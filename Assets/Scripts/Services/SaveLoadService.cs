@@ -9,6 +9,7 @@ namespace Services
 {
     public class SaveLoadService : IInitializable
     {
+        private bool _isNeedSave = true;
         private int _counter;
         private string _filePath;
         public int Counter => _counter;
@@ -38,10 +39,22 @@ namespace Services
 
         public void SaveData(int counter)
         {
+            if(!_isNeedSave)
+                return;
+            
             JsonIntDto dto = new JsonIntDto();
             dto.StartValue = counter.ToString();
             
             File.WriteAllText(_filePath, JsonUtility.ToJson(dto));
+        }
+
+        public void DeleteData()
+        {
+            if (File.Exists(_filePath))
+            {
+                File.Delete(_filePath);
+                _isNeedSave = false;
+            }
         }
     }
 }

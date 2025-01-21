@@ -1,8 +1,8 @@
 using System;
-using Cysharp.Threading.Tasks;
 using Data.Dto;
 using MVP.Views;
 using Services;
+using UnityEngine;
 
 namespace MVP.Presenters
 {
@@ -25,6 +25,7 @@ namespace MVP.Presenters
             _view.SaveCounter += SaveCounter;
             _view.UpdateButton.onClick.AddListener(UpdateContent);
             _view.UpButton.onClick.AddListener(UpCounter);
+            _view.DeleteButton.onClick.AddListener(DeleteSaveAndQuit);
         }
         protected override void OnDispose()
         {
@@ -32,6 +33,7 @@ namespace MVP.Presenters
             _view.SaveCounter -= SaveCounter;
             _view.UpdateButton.onClick.RemoveListener(UpdateContent);
             _view.UpButton.onClick.RemoveListener(UpCounter);
+            _view.DeleteButton.onClick.RemoveListener(DeleteSaveAndQuit);
         }
 
         private void HandleDto(IDto dto)
@@ -65,6 +67,17 @@ namespace MVP.Presenters
             {
                 _saveLoadService.SaveData(_counter);
             }
+        }
+
+        private void DeleteSaveAndQuit()
+        {
+            _saveLoadService.DeleteData();
+            Application.Quit();
+            
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#endif
+            
         }
     }
 }

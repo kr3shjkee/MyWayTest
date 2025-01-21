@@ -11,6 +11,7 @@ namespace MVP.Views
         [field:SerializeField] public TMP_Text Counter { get; private set; }
         [field:SerializeField] public Button UpButton { get; private set; }
         [field:SerializeField] public Button UpdateButton { get; private set; }
+        [field:SerializeField] public Button DeleteButton { get; private set; }
 
         public event Action SaveCounter;
 

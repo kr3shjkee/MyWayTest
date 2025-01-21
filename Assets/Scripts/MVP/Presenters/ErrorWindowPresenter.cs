@@ -27,6 +27,11 @@ namespace MVP.Presenters
         private void CloseApplication()
         {
             Application.Quit();
+            
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#endif
+            
         }
 
         private void RetryLoad()
