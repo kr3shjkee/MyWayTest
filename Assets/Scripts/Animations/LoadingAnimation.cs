@@ -17,6 +17,7 @@ namespace Animations
 
         public async UniTask StartAnimation(float duration)
         {
+            SetDefault();
             try
             {
                 _cts = new CancellationTokenSource();
@@ -42,7 +43,14 @@ namespace Animations
 
         public void FinishAnimation()
         {
-            _cts?.Cancel();
+            _sequence?.Kill();
+            SetDefault();
+            
+            if (_cts != null)
+            {
+                _cts.Dispose();
+                _cts = null;
+            }
         }
 
         private void SetDefault()
