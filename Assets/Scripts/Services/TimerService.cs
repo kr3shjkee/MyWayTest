@@ -20,7 +20,7 @@ namespace Services
 
         public bool IsTimerFinish => _isTimerFinish;
 
-        public async void StartTimer()
+        public async void StartTimerAsync()
         {
             _isTimerFinish = false;
 

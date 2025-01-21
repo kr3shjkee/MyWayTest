@@ -15,7 +15,7 @@ namespace Animations
         private CancellationTokenSource _cts;
         private Sequence _sequence;
 
-        public async UniTask StartAnimation(float duration)
+        public async UniTask StartAnimationAsync(float duration)
         {
             SetDefault();
             try

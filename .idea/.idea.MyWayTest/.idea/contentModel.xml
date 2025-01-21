@@ -990,6 +990,7 @@
             <e p="ErrorScreenService.cs" t="Include" />
             <e p="LoadingService.cs" t="Include" />
             <e p="MainScreenService.cs" t="Include" />
+            <e p="SaveLoadService.cs" t="Include" />
             <e p="TimerService.cs" t="Include" />
           </e>
         </e>

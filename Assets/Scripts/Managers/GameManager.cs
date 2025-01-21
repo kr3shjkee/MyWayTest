@@ -12,16 +12,19 @@ namespace Managers
         private readonly TimerService _timerService;
         private readonly MainScreenService _mainScreenService;
         private readonly ErrorScreenService _errorScreenService;
+        private readonly SaveLoadService _saveLoadService;
 
         public GameManager(LoadingService loadingService, 
             TimerService timerService, 
             MainScreenService mainScreenService,
-            ErrorScreenService errorScreenService)
+            ErrorScreenService errorScreenService,
+            SaveLoadService saveLoadService)
         {
             _loadingService = loadingService;
             _timerService = timerService;
             _mainScreenService = mainScreenService;
             _errorScreenService = errorScreenService;
+            _saveLoadService = saveLoadService;
             
             _loadingService.LoadingFinished += CheckTimer;
             _loadingService.LoadWithError += HandleLoadError;
@@ -41,16 +44,20 @@ namespace Managers
         
         public void Initialize()
         {
-            _loadingService.StartLoad();
-            _timerService.StartTimer();
+            _loadingService.StartLoadAsync();
+            _timerService.StartTimerAsync();
         }
 
-        private void CheckTimer(WaitingType type)
+        private async void CheckTimer(WaitingType type)
         {
             if (type == WaitingType.Loading && _timerService.IsTimerFinish ||
                 type == WaitingType.Timer && _loadingService.IsLoadingFinish)
             {
                 MainScreenDto dto = _loadingService.GetDto();
+                if (await _saveLoadService.TryLoadDataAsync())
+                {
+                    dto.Counter = _saveLoadService.Counter.ToString();
+                }
                 _mainScreenService.InvokeShowMainScreen(dto);
                 _loadingService.InvokeHideLoadScreen();
             }

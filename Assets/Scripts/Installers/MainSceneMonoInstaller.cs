@@ -26,6 +26,7 @@ namespace Installers
             Container.Bind<TimerService>().AsSingle();
             Container.Bind<MainScreenService>().AsSingle();
             Container.Bind<ErrorScreenService>().AsSingle();
+            Container.BindInterfacesAndSelfTo<SaveLoadService>().AsSingle();
         }
         
         private void BindPresenters()

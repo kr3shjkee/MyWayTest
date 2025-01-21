@@ -28,14 +28,13 @@ namespace Services
 
         public bool IsLoadingFinish => _isLoadingFinish;
 
-        public async void StartLoad()
+        public async void StartLoadAsync()
         {
             _isLoadingFinish = false;
             _dto = new MainScreenDto();
             ShowLoadScreen?.Invoke();
-            CheckSaveData();
-            
-            if (await TryLoadJsons() && await TryLoadBundle())
+
+            if (await TryLoadJsonsAsync() && await TryLoadBundleAsync())
             {
                 _isLoadingFinish = true;
                 LoadingFinished?.Invoke(WaitingType.Loading);
@@ -56,17 +55,12 @@ namespace Services
             HideLoadScreen?.Invoke();
         }
 
-        private void CheckSaveData()
-        {
-            
-        }
-
-        private async UniTask<bool> TryLoadJsons()
+        private async UniTask<bool> TryLoadJsonsAsync()
         {
             try
             {
                 _cts = new CancellationTokenSource();
-                JsonStringDto stringDto = await GetJson<JsonStringDto>(_urlSettings.JsonStringUrl, _cts.Token);
+                JsonStringDto stringDto = await GetJsonAsync<JsonStringDto>(_urlSettings.JsonStringUrl, _cts.Token);
                 _cts.Dispose();
                 _cts = null;
                 _dto.Text = stringDto.Text;
@@ -79,7 +73,7 @@ namespace Services
             try
             {
                 _cts = new CancellationTokenSource();
-                JsonIntDto intDto = await GetJson<JsonIntDto>(_urlSettings.JsonIntUrl, _cts.Token);
+                JsonIntDto intDto = await GetJsonAsync<JsonIntDto>(_urlSettings.JsonIntUrl, _cts.Token);
                 _cts.Dispose();
                 _cts = null;
                 _dto.Counter = intDto.StartValue;
@@ -92,7 +86,7 @@ namespace Services
             return true;
         }
         
-        private async UniTask<TValue> GetJson<TValue>(string url, CancellationToken token) where TValue : IDto
+        private async UniTask<TValue> GetJsonAsync<TValue>(string url, CancellationToken token) where TValue : IDto
         {
             TValue value;
 
@@ -120,12 +114,12 @@ namespace Services
             return value;
         }
 
-        private async UniTask<bool> TryLoadBundle()
+        private async UniTask<bool> TryLoadBundleAsync()
         {
             try
             {
                 _cts = new CancellationTokenSource();
-                Sprite sprite = await GetSprite(_urlSettings.AssetBundleUrl, _cts.Token);
+                Sprite sprite = await GetSpriteAsync(_urlSettings.AssetBundleUrl, _cts.Token);
                 _cts.Dispose();
                 _cts = null;
                 _dto.ButtonSprite = sprite;
@@ -138,7 +132,7 @@ namespace Services
             return true;
         }
 
-        private async UniTask<Sprite> GetSprite(string url, CancellationToken token)
+        private async UniTask<Sprite> GetSpriteAsync(string url, CancellationToken token)
         {
             if (!Caching.ready)
             {

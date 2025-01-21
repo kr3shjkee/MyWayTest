@@ -34,7 +34,7 @@ namespace MVP.Presenters
         {
             _view
                 .Animations
-                .StartAnimation(_valuesSettings.LoadingDuration)
+                .StartAnimationAsync(_valuesSettings.LoadingDuration)
                 .Forget();
             
             _view.Show();
