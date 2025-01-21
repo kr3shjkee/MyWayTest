@@ -23,14 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77d1a38b-2d80-4c46-979d-ea94ed5dc520" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Animations.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Animations/LoadingAnimation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Animations/LoadingAnimation.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyWayTest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyWayTest/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyWayTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyWayTest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/MainSceneMonoInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/MainSceneMonoInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/ErrorWindowBasePresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/ErrorWindowPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/ErrorWindowBasePresenter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MVP/Views/ErrorWindowView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MVP/Views/ErrorWindowView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/LoadingService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/LoadingService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Loading Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Loading Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/LoadingWindowPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/LoadingWindowPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MVP/Views/LoadingWindowView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MVP/Views/LoadingWindowView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/ValuesSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/ValuesSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,12 +72,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/UrlSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MVP/IPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MVP/BasePresenter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Views/LoadingWindowView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/MainWindowBasePresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/LoadingWindowBasePresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MVP/BaseView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/ProjectMonoInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/LoadingWindowPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/ValuesSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/ProjectSettingsInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/Enum/WaitingType.cs" />
@@ -94,6 +93,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Views/ErrorWindowView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/ErrorWindowPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/LoadingService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LoadingAnimation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Views/LoadingWindowView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MVP/Presenters/LoadingWindowPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Animations/LoadingAnimation.cs" />
       </list>
     </option>
   </component>
@@ -120,10 +123,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="19556">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="19556" />
+      <option name="pid" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -139,13 +142,14 @@
       <option name="presentableId" value="Default" />
       <updated>1737400568652</updated>
       <workItem from="1737400580512" duration="16558000" />
+      <workItem from="1737456404529" duration="2277000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -157,6 +161,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

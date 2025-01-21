@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d4e2edfa4b896f4684b0e00dd331f3f, type: 3}
   m_Name: ValuesSettings
   m_EditorClassIdentifier: 
-  <LoadingDuration>k__BackingField: 3.5
+  <LoadingDuration>k__BackingField: 0.5
